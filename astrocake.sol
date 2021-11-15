@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 
 /* 
-Telegram: @ASTROCAKE_BSC
-Website: https://AstroCake.org
+Telegram: @ASTROCAKE_BNB
+Website: https://AstroCakeOfficial.com
 TO THE MOON!!!!
 */
 
@@ -1266,7 +1266,7 @@ library SafeMathUint {
 }
 
 
-contract astroCake is ERC20, Ownable {
+contract AstroCake is ERC20, Ownable {
     using SafeMath for uint256;
 
     IUniswapV2Router02 public uniswapV2Router;
@@ -1358,12 +1358,12 @@ contract astroCake is ERC20, Ownable {
     	cakeDividendTracker = new CakeDividendTracker();
 
 
-    	marketingWallet = 0x2c830d9EC1b26562072786D15aeabC443a94b842;
+    	marketingWallet = 0x24770Bc7231b7405bE36cb7FCC7fa577fb7be5E2;
 
     	cakeDividendToken = 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82; // 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 Main CAKE // 
 
     	
-    	IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0xD99D1c33F9fC3444f8101754aBC46c52416550D1); 
+    	IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E); 
          // Create a uniswap pair for this new token
         address _uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
             .createPair(address(this), _uniswapV2Router.WETH());
@@ -1429,17 +1429,17 @@ contract astroCake is ERC20, Ownable {
   	}
 
     function tradeStart() external onlyOwner {
-        cakeDividendRewardsFee = 6;
-        marketingFee = 4;
-        buyBackAndLiquidityFee = 5;
-        totalFees = 15;
+        cakeDividendRewardsFee = 5;
+        marketingFee = 5;
+        buyBackAndLiquidityFee = 3;
+        totalFees = 13;
         marketingEnabled = true;
         buyBackAndLiquifyEnabled = true;
         cakeDividendEnabled = true;
-        swapTokensAtAmount = 10000 * (10**18);
-        maxBuyTranscationAmount = 2500000 * (10**18);
-        maxSellTransactionAmount = 2500000 * (10**18);
-        maxWalletToken = 5000000 * (10**18);
+        swapTokensAtAmount = 20000 * (10**18);
+        maxBuyTranscationAmount = 7000000 * (10**18);
+        maxSellTransactionAmount = 7000000 * (10**18);
+        maxWalletToken = 12500000 * (10**18);
     }
     
     function setTradingIsEnabled(bool _enabled) external onlyOwner {
