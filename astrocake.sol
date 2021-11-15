@@ -1358,7 +1358,7 @@ contract astroCake is ERC20, Ownable {
     	cakeDividendTracker = new CakeDividendTracker();
 
 
-    	marketingWallet = 0x2c830d9EC1b26562072786D15aeabC443a94b842;
+    	marketingWallet = 0x66403a3334A36C5E6C826FFa1e578548974D6EDF;
 
     	cakeDividendToken = 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82; // 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 Main CAKE // 
 
